@@ -19,6 +19,6 @@ build:
         name: pip install requirements
         code: |
           which pip
-          pip install -r pip.requirements
+          sudo pip install -r pip.requirements
 
 
