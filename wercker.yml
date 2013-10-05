@@ -1,4 +1,5 @@
-box: mies/sightmachine
+#box: mies/sightmachine
+box: wercker/python
 services:
   - wercker/mongodb
   - mies/sightmachine-rabbitmq@0.0.3
