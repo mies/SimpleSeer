@@ -1,21 +1,23 @@
 box: mies/sightmachine
 services:
   - wercker/mongodb
-  - mies/sightmachine-rabbitmq
+  - mies/sightmachine-rabbitmq@0.0.3
 # Build definition
 build:
   # The steps that will be executed on build
   steps:
     # A step that executes `pip install` command
-    - script:
-        name: pip install requirements
-        code: |
-          pip install -r pip.requirements
-
-    # A custom script step, name value is used in the UI
+        # A custom script step, name value is used in the UI
     # and the code value contains the command that get executed
     - script:
         name: echo python information
         code: |
           echo "python version $(python --version) running"
           echo "pip version $(pip --version) running"
+    - script:
+        name: pip install requirements
+        code: |
+          which pip
+          pip install -r pip.requirements
+
+
