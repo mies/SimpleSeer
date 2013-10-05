@@ -7,7 +7,10 @@ build:
   # The steps that will be executed on build
   steps:
     # A step that executes `pip install` command
-    - pip-install
+    - script:
+        name: pip install requirements
+        code: |
+          pip install -r pip.requirements
 
     # A custom script step, name value is used in the UI
     # and the code value contains the command that get executed
